@@ -14,13 +14,13 @@ static const NSTimeInterval gSecondsPerMinute = 60.0;
 
 @implementation ISO8601ForCocoaTimeOnlyTests
 {
-	ISO8601DateFormatter *_iso8601DateFormatter;
+	PHISO8601DateFormatter *_iso8601DateFormatter;
 }
 
 - (void) setUp {
 	[super setUp];
 
-	_iso8601DateFormatter = [[ISO8601DateFormatter alloc] init];
+	_iso8601DateFormatter = [[PHISO8601DateFormatter alloc] init];
 }
 
 - (void) tearDown {

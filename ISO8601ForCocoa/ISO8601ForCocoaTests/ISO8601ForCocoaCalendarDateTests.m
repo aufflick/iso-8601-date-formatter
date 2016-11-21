@@ -26,13 +26,13 @@ expectTimeIntervalSinceReferenceDate:(NSTimeInterval)expectedTimeIntervalSinceRe
 
 @implementation ISO8601ForCocoaCalendarDateTests
 {
-	ISO8601DateFormatter *_iso8601DateFormatter;
+	PHISO8601DateFormatter *_iso8601DateFormatter;
 }
 
 - (void) setUp {
 	[super setUp];
 
-	_iso8601DateFormatter = [[ISO8601DateFormatter alloc] init];
+	_iso8601DateFormatter = [[PHISO8601DateFormatter alloc] init];
 }
 
 - (void) tearDown {
@@ -380,7 +380,7 @@ expectTimeZoneWithHoursFromGMT:expectedHoursFromGMT];
 //https://github.com/boredzo/iso-8601-date-formatter/issues/63
 - (void) testParsingDecember1st2014 {
 	NSString *_Nonnull const str = @"2014-12-01";
-	ISO8601DateFormatter *_Nonnull const formatter = [[ISO8601DateFormatter alloc] init];
+	PHISO8601DateFormatter *_Nonnull const formatter = [[PHISO8601DateFormatter alloc] init];
 	formatter.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 
 	NSDateComponents *_Nonnull const components = [formatter dateComponentsFromString:str];
@@ -592,7 +592,7 @@ expectTimeZoneWithHoursFromGMT:expectedHoursFromGMT];
 
 // https://github.com/boredzo/iso-8601-date-formatter/issues/29
 - (void) testParsingDoesNotMakeStuffUp {
-	ISO8601DateFormatter *_Nonnull const formatter = [[ISO8601DateFormatter alloc] init];
+	PHISO8601DateFormatter *_Nonnull const formatter = [[PHISO8601DateFormatter alloc] init];
 
 	NSString *_Nonnull const dateOnlyString = @"2016-04-01";
 	NSDateComponents *_Nullable const dateOnlyComponents = [formatter dateComponentsFromString:dateOnlyString];

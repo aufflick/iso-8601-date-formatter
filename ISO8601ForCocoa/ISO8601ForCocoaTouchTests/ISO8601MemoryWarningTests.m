@@ -10,7 +10,7 @@
 
 #import "ISO8601DateFormatter.h"
 
-@interface ISO8601DateFormatter (ISO8601MemoryWarningTesting)
+@interface PHISO8601DateFormatter (ISO8601MemoryWarningTesting)
 + (void) purgeGlobalCaches;
 @end
 
@@ -18,16 +18,16 @@
 
 @implementation ISO8601MemoryWarningTests
 {
-	ISO8601DateFormatter *_iso8601DateFormatter;
+	PHISO8601DateFormatter *_iso8601DateFormatter;
 }
 
 - (void) setUp {
 	[super setUp];
 
-	_iso8601DateFormatter = [[ISO8601DateFormatter alloc] init];
+	_iso8601DateFormatter = [[PHISO8601DateFormatter alloc] init];
 
 	//Just in case this isn't the first test that this process has run…
-	[ISO8601DateFormatter purgeGlobalCaches];
+	[PHISO8601DateFormatter purgeGlobalCaches];
 }
 
 - (void) tearDown {
